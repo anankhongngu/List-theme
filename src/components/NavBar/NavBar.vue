@@ -26,10 +26,11 @@
             <router-link :to="`/sendmail`" :class="{ active: $route.path === '/sendmail' }" class="text-nav w3-bar-item w3-button w3-padding">    
                 <i class="fa fa-envelope fa-fw w3-margin-right"></i>SEND MAIL
             </router-link>
-            -->
+            
             <router-link :to="`/manga/search`" v-if="isActive('/manga')" :class="{ active: isActive('/manga') }" class="text-nav w3-bar-item w3-button w3-padding">    
                 <i class="fa fa-book fa-fw w3-margin-right"></i>MANGA
             </router-link>
+            -->
             
         </div>   
 

@@ -17,6 +17,9 @@
                 <button @click="activeTab='manga'" :class="{ active: activeTab === 'manga' }" class="w3-button text-cate">
                     <i class="fa fa-photo w3-margin-right"></i>Manga
                 </button>
+                <button @click="activeTab='film'" :class="{ active: activeTab === 'film' }" class="w3-button text-cate">
+                    <i class="fa fa-play w3-margin-right"></i>Film
+                </button>
             </div>
         </div>  
     </header>
@@ -28,6 +31,9 @@
     </div>
     <div v-if="activeTab === 'manga'" class="tab-content">
         <Manga/>    
+    </div>
+    <div v-if="activeTab === 'film'" class="tab-content">
+        <Film/>    
     </div> 
 </template> 
 <script>  
@@ -35,6 +41,7 @@
 import Theme from '../Theme/Theme.vue'; 
 import Video from '../Video/Video.vue'; 
 import Manga from '../Manga/Manga.vue'; 
+import Film from '../Film/Film.vue'; 
     export default {
         data() { 
             return {
@@ -43,8 +50,9 @@ import Manga from '../Manga/Manga.vue';
         },
         components: {
             Theme,
-            Video,
-            Manga
+            Video, 
+            Manga,
+            Film
         },
         methods: {
             sidebarOpen() {
