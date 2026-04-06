@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+//import { createRouter, createWebHashHistory } from 'vue-router'
+
 import InfoMain from '../components/Main/InfoMain.vue'
 import MangaInfo from '../views/MangaInfo.vue'
 import MangaDetail from '../views/MangaDetail.vue'
