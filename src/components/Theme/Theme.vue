@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="wrapper-list-theme">
-        <div class="heading"><span>Featured Fusiness Website</span></div>
+        <div class="heading"><span>Featured Business Website</span></div>
         <div class="w3-row-padding">
             <div class="w3-third w3-container w3-margin-bottom ">
                 <div class="w3-image">
