@@ -1,35 +1,18 @@
-/*
 import { fileURLToPath, URL } from 'node:url'
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-export default defineConfig(({ mode }) => {
-  return {
-    plugins: [
-      vue(),
-      mode === 'development' ? vueDevTools() : null
-    ].filter(Boolean),
-    resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      },
-    },
-  }
-})*/
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
-export default defineConfig(({ mode }) => ({
-  base: "./",
+// https://vite.dev/config/
+export default defineConfig({
   plugins: [
     vue(),
-    mode === 'development' ? vueDevTools() : null
-  ].filter(Boolean),
+    vueDevTools(),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-}))
+})
