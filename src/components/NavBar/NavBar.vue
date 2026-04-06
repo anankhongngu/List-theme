@@ -15,9 +15,9 @@
             <router-link :to="`/`" :class="{ active: $route.path === '/' }" class="text-nav w3-bar-item w3-button w3-padding">    
                 <i class="fa fa-home fa-fw w3-margin-right"></i>HOME
             </router-link>
-            <router-link :to="`/resume`" :class="{ active: $route.path === '/resume' }" class="text-nav w3-bar-item w3-button w3-padding">    
+            <!-- <router-link :to="`/resume`" :class="{ active: $route.path === '/resume' }" class="text-nav w3-bar-item w3-button w3-padding">    
                 <i class="fa fa-address-card-o fa-fw w3-margin-right"></i>RESUME
-            </router-link>
+            </router-link> -->
  
             <a href="mailto:truongan2700@gmail.com" class="text-nav w3-bar-item w3-button w3-padding">
                 <i class="fa fa-envelope w3-margin-right"></i>CONTACT
@@ -35,6 +35,9 @@
         </div>   
 
         <div class="w3-panel w3-large">
+            <a href="https://github.com/anankhongngu/" class="w3-margin-right icon-color">
+                <i class="fa fa-github w3-hover-opacity"></i>
+            </a>
             <a href="https://fb.com/truongan15" class="w3-margin-right icon-color">
                 <i class="fa fa-facebook-official w3-hover-opacity"></i>
             </a>  
@@ -72,7 +75,7 @@
     export default {
         data() {
             return {
-                current: localStorage.getItem('theme')
+                current: localStorage.getItem('theme') || 'dark'
             }
         },       
         setup() {
