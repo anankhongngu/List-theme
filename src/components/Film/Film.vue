@@ -37,6 +37,7 @@
 import { debounce } from 'lodash';
 import axios from 'axios';
 import { buildImageMovieUrl } from '@/utils/imageHelper';
+import { movieApi } from '@/config/movieApi';
 export default {
     data() {
         return {
@@ -63,7 +64,7 @@ export default {
             this.textEmpty = 'Đang tìm kiếm phim...';
             this.movieList = [];
 
-            const url = `https://ophim1.com/v1/api/tim-kiem?keyword=${encodeURIComponent(this.query)}`;
+            const url = movieApi.search(this.query);
 
             try {
                 const response = await axios.get(url);
